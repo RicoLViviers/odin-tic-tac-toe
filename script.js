@@ -29,3 +29,16 @@ function GameController()
         isGameOver = false;
     }
 }
+
+
+let myBoard = new Gameboard();
+
+function DisplayController() {
+    this.renderBoard = function() {
+        const boardDivs = document.getElementsByClassName("board-square");
+        for (let i = 0; i < boardDivs.length; i++) {
+            boardDivs[i].textContent = myBoard.gameboard[i];
+        }
+    }
+}
+
