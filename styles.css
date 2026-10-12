@@ -1,1 +1,27 @@
+*
+{
+    background-color: black;
+}
 
+.game-board
+{
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px;
+}
+
+.board-square
+{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+}
+
+.board-square:hover
+{
+    background-color: rgb(219, 217, 217);
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+}
