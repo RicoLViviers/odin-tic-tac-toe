@@ -11,3 +11,10 @@ function Gameboard()
         ' ', ' ', ' '
     ]
 }
+
+function GameController()
+{
+    let players = [];
+    let playerTurn = 0;
+    let isGameOver = false;
+}
