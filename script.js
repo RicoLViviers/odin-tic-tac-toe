@@ -15,6 +15,11 @@ function Gameboard()
     {
         return this.gameboard;
     }
+
+    this.setMarker = function(index, marker)
+    {
+        this.gameboard[index] = marker;
+    }
 }
 
 function GameController()
