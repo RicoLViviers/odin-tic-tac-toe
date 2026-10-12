@@ -44,8 +44,9 @@ function GameController()
 let myBoard = new Gameboard();
 
 function DisplayController() {
+    const boardDivs = document.getElementsByClassName("board-square");
+    
     this.renderBoard = function() {
-        const boardDivs = document.getElementsByClassName("board-square");
         for (let i = 0; i < boardDivs.length; i++) {
             boardDivs[i].textContent = myBoard.gameboard[i];
         }
