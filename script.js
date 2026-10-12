@@ -1,7 +1,6 @@
-function Player(firstPlayer, secondPlayer)
+function Player(name, marker)
 {
-    this.firstPlayer = firstPlayer;
-    this.secondPlayer = secondPlayer;
+    return { name, marker }
 }
 
 function Gameboard()
