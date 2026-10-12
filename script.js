@@ -10,6 +10,11 @@ function Gameboard()
         ' ', ' ', ' ',
         ' ', ' ', ' '
     ]
+
+    this.getBoard = function()
+    {
+        return this.gameboard;
+    }
 }
 
 function GameController()
