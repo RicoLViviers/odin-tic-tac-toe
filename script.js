@@ -36,6 +36,19 @@ function GameController() {
     let playerTurn = 0;
     let isGameOver = false;
 
+    const winningConditions = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+
+        [0, 4, 8],
+        [2, 4, 6]
+    ];
+
     this.startGame = function (player1Name, player2Name) {
         players = [
             Player(player1Name, 'X'),
@@ -67,6 +80,23 @@ function GameController() {
         playerTurn = (playerTurn + 1) % players.length;
         return true;
     }
+
+    this.checkWinningCondition = function()
+    {
+        for (const condition of winningConditions) {
+            let a = condition[0];
+            let b = condition[1];
+            let c = condition[2];
+
+            if (
+                board.getBoard()[a] !== ' ' && 
+                board.getBoard()[a] === board.getBoard()[b] &&
+                board.getBoard()[a] === board.getBoard()[c])
+                {
+                    isGameOver = true;
+                }
+        }
+    }
 }
 
 
@@ -91,6 +121,8 @@ function DisplayController() {
             if (moveSuccesful) {
                 this.renderBoard();
             }
+
+            myController.checkWinningCondition();
         })
     }
 }
