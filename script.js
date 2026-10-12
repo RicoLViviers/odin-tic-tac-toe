@@ -18,7 +18,7 @@ function GameController()
     let playerTurn = 0;
     let isGameOver = false;
 
-    startGame = function(player1Name, player2Name)
+    this.startGame = function(player1Name, player2Name)
     {
         players = [
             Player(player1Name, 'X'),
