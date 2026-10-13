@@ -5,7 +5,7 @@
     --color-interactive-surfaces: #222222;
     --color-hover-surfaces: #303030;
     --color-accent: #FF7043;
-    --color-accent-hover: #ff8a65;
+    --color-accent-hover: #f87a53;
     --color-primary-text: #F5F5F5;
 }
 
@@ -71,7 +71,7 @@ body
     transform: scale(0.96);
 }
 
-#play-again
+button
 {
     padding: 12px 28px;
 
@@ -89,13 +89,13 @@ body
                 transform 0.2s ease;
 }
 
-#play-again:hover
+button:hover
 {
     background-color: var(--color-accent-hover);
     transform: translateY(-2px);
 }
 
-#play-again:active
+button:active
 {
     transform: translateY(0px);
 }
