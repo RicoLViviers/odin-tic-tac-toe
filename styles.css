@@ -20,6 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: black;
 }
 
 .board-square:hover
@@ -28,10 +29,4 @@
     width: 50px;
     height: 50px;
     border: 2px solid black;
-}
-
-p
-{
-    background-color: white;
-    color: black;
 }
